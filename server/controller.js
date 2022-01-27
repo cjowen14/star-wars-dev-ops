@@ -35,7 +35,6 @@ module.exports = {
         }
         catch(err){
             rollbar.error("This doesn't exist");
-            console.log(err);
         }
         movies.push(newMovie);
         res.status(200).send(movies);

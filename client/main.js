@@ -1,7 +1,7 @@
 const moviesContainer = document.querySelector('#movies-container')
 const form = document.querySelector('form')
 
-const baseURL = `http://localhost:4848/api/movies`
+const baseURL = `/api/movies`;
 
 
 const moviesCallback = ({ data: movies }) => displayMovies(movies)
