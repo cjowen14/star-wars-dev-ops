@@ -1,7 +1,12 @@
-const Rollbar = require('rollbar');
 const movies = require('./db.json');
 let globalID = 9;
 
+var Rollbar = require('rollbar')
+var rollbar = new Rollbar({
+  accessToken: '6bcd5a0efa4e48edb62edc3850999d2b',
+  captureUncaught: true,
+  captureUnhandledRejections: true,
+})
 module.exports = {
     getMovies: (req, res) => {
         res.status(200).send(movies);
