@@ -16,8 +16,8 @@ module.exports = {
         let index = movies.findIndex((movie) => {
             return movie.id === +req.params.id;
         })
-
         movies.splice(index, 1);
+        rollbar.info("Movie deleted.");
         res.status(200).send(movies);
     },
 
@@ -29,14 +29,14 @@ module.exports = {
             imageURL,
             rating
         }
-
-        try{
-            nonExist();
-        }
-        catch(err){
-            rollbar.error("This doesn't exist");
-        }
+        // try{
+        //     nonExist();
+        // }
+        // catch(err){
+        //     rollbar.error("This doesn't exist");
+        // }
         movies.push(newMovie);
+        rollbar.info("Movie added!");
         res.status(200).send(movies);
         globalID++;
     },
