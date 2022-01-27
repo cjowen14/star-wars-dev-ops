@@ -16,6 +16,10 @@ app.get('/styles', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/styles.css'));
 })
 
+app.get('/main', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/main.js'));
+})
+
 app.use(cors());
 app.use(express.json());
 
