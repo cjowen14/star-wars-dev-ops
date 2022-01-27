@@ -5,6 +5,14 @@ const{getMovies, deleteMovie, createMovie, updateMovie} = require('./controller.
 
 let app = express();
 
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/index.html'));
+})
+
+app.get('/styles', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/styles.css'));
+})
+
 app.use(cors());
 app.use(express.json());
 
