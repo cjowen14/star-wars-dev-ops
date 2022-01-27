@@ -3,12 +3,25 @@ const cors = require('cors');
 const path = require('path');
 require('dotenv').config();
 const port = process.env.PORT;
-
+let app = express();
 const{getMovies, deleteMovie, createMovie, updateMovie} = require('./controller.js');
 
-let app = express();
+app.use(cors());
+app.use(express.json());
+
+// include and initialize the rollbar library with your access token
+var Rollbar = require('rollbar')
+var rollbar = new Rollbar({
+  accessToken: '6bcd5a0efa4e48edb62edc3850999d2b',
+  captureUncaught: true,
+  captureUnhandledRejections: true,
+})
+
+// record a generic message and send it to Rollbar
+rollbar.log('Hello world!')
 
 app.get('/', (req, res) => {
+    rollbar.info("HTML served successfully");
     res.sendFile(path.join(__dirname, '../client/index.html'));
 })
 
@@ -28,10 +41,6 @@ app.get('/db', (req, res) => {
     res.sendFile(path.join(__dirname, './db.json'));
 })
 
-
-
-app.use(cors());
-app.use(express.json());
 
 app.get('/api/movies', getMovies);
 app.delete('/api/movies/:id', deleteMovie);
