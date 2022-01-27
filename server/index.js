@@ -1,5 +1,7 @@
 const express = require('express');
 const cors = require('cors');
+require('dotenv').config();
+const port = process.env.PORT;
 
 const{getMovies, deleteMovie, createMovie, updateMovie} = require('./controller.js');
 
@@ -22,7 +24,6 @@ app.post('/api/movies', createMovie);
 app.put('/api/movies/:id', updateMovie);
 
 
-
-app.listen(4004, () => {
-    console.log("Server is running on port 4000");
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
 })
