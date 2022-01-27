@@ -29,7 +29,7 @@ module.exports = {
             nonExist();
         }
         catch(err){
-            Rollbar.error("This doesn't exist");
+            rollbar.error("This doesn't exist");
             console.log(err);
         }
         movies.push(newMovie);
