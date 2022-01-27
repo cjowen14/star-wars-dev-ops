@@ -20,6 +20,16 @@ app.get('/main', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/main.js'));
 })
 
+app.get('/controller', (req, res) => {
+    res.sendFile(path.join(__dirname, './controller.js'));
+})
+
+app.get('/db', (req, res) => {
+    res.sendFile(path.join(__dirname, './db.json'));
+})
+
+
+
 app.use(cors());
 app.use(express.json());
 
