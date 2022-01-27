@@ -41,7 +41,6 @@ app.get('/db', (req, res) => {
     res.sendFile(path.join(__dirname, './db.json'));
 })
 
-
 app.get('/api/movies', getMovies);
 app.delete('/api/movies/:id', deleteMovie);
 app.post('/api/movies', createMovie);

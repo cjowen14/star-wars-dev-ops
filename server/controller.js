@@ -1,3 +1,4 @@
+const Rollbar = require('rollbar');
 const movies = require('./db.json');
 let globalID = 9;
 
@@ -15,14 +16,21 @@ module.exports = {
         res.status(200).send(movies);
     },
 
-    createMovie: (req, res) =>{
+    createMovie: (req, res) =>{ 
         let {title, imageURL, rating} = req.body;
-
         let newMovie = {
             id: globalID,
             title,
             imageURL,
             rating
+        }
+
+        try{
+            nonExist();
+        }
+        catch(err){
+            Rollbar.error("This doesn't exist");
+            console.log(err);
         }
         movies.push(newMovie);
         res.status(200).send(movies);
