@@ -49,9 +49,11 @@ module.exports = {
         })
 
         if(movies[index].rating === 5 && type === 'plus'){
+            rollbar.critical("Someone tried to rate over 5.");
             res.status(400).send("Rating cannot be over 5");
         } 
         else if(movies[index].rating === 1 && type === 'minus'){
+            rollbar.warning("Someone tried to rate under 1");
             res.status(400).send("Rating canndot be less than 1");
         }
         else if(type === 'plus'){
