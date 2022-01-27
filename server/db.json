@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "title": "The Phantom Menace",
+      "rating": 2,
+      "imageURL" : "https://i.pinimg.com/736x/c7/7a/50/c77a50a74bc919bd055cd2d43baed4a6.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Attack of the Clones",
+      "rating": 3,
+      "imageURL" : "https://th.bing.com/th/id/R.ad07ed620b71040c32dbf6d03579eb7a?rik=WB5TPVU0hQH1%2fQ&riu=http%3a%2f%2f4.bp.blogspot.com%2f-0X-JYjNG7hg%2fUBJPKgyBxpI%2fAAAAAAAAJmQ%2fEZmnn41sW3g%2fs1600%2fStar%2bWars%2b-%2bAttack%2bOf%2bThe%2bClones%2b(2002)%2bby%2bDrew%2bStruzan.jpg&ehk=KNDfexh8BtuBJC1GxciaZz2fbwcjOMQSPjy64wCFx5E%3d&risl=&pid=ImgRaw&r=0"
+    },
+    {
+      "id": 3,
+      "title": "Revenge of the Sith",
+      "rating": 5,
+      "imageURL" : "https://image.tmdb.org/t/p/original/9IhnxfbRH2kybbWrb4Ac8yvN2jP.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Solo A Star Wars Story",
+      "rating": 2,
+      "imageURL" : "https://cdn.arstechnica.net/wp-content/uploads/2018/04/Solo-movie-poster.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Rogue One",
+      "rating": 4,
+      "imageURL" : "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/2f3ce7bec424b234f13f395c3874bd72_3d56a288-2170-409a-96c7-931d1b9f26a7_480x.progressive.jpg?v=1573588823"
+    },
+    {
+      "id": 6,
+      "title": "A New Hope",
+      "rating": 4,
+      "imageURL" : "https://th.bing.com/th/id/OIP._VPvvcITJ57ytFGh6QynRAHaJ-?pid=ImgDet&rs=1"
+    },
+    {
+      "id": 7,
+      "title": "The Empire Strikes Back",
+      "rating": 5,
+      "imageURL" : "https://th.bing.com/th/id/R.3d3fe2a0f2d94613c4b240eec2712a22?rik=7Dp2G4bD9bF%2fhw&pid=ImgRaw&r=0"
+    },
+    {
+      "id": 8,
+      "title": "Return of the Jedi",
+      "rating": 3,
+      "imageURL" : "https://th.bing.com/th/id/OIP.7C9awXMfsHW2Z2MoplWuZAHaLV?pid=ImgDet&rs=1"
+    }
+    
+  ]
