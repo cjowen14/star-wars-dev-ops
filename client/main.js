@@ -1,7 +1,9 @@
 const moviesContainer = document.querySelector('#movies-container')
 const form = document.querySelector('form')
+const{port} = `../server/index.js`;
 
-const baseURL = `http://localhost:4004/api/movies`
+const baseURL = `/api/movies`
+
 
 const moviesCallback = ({ data: movies }) => displayMovies(movies)
 const errCallback = err => console.log(err.response.data)
